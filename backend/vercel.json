@@ -1,31 +1,14 @@
 {
-    "builds": [
-      {
-        "src": "./app.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "frontend/dist/assets/index-UABrWCiY.css",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "frontend/dist/assets/index-Cdg-ZROH.js",
-        "use": "@vercel/static"
-      }
+    "dest": [
+        {
+            "src": "./app.js",
+            "use": "@vercel/node"
+        }
     ],
     "routes": [
-      {
-        "src": "/.*",
-        "dest": "app.js"
-      },
-      {
-        "src": "/assets/index-UABrWCiY.css",
-        "dest": "frontend/dist/assets/index-UABrWCiY.css"
-      },
-      {
-        "src": "/assets/index-Cdg-ZROH.js",
-        "dest": "frontend/dist/assets/index-Cdg-ZROH.js"
-      }
+        {
+            "src": "/.*",
+            "dest": "index.js"
+        }
     ]
-  }
-  
+}
