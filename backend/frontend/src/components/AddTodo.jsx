@@ -18,7 +18,7 @@ const TodoApp = ({ userEmail }) => {
 
     const fetchTodos = async () => {
         try {
-            const response = await fetch(`${window.location.origin}/gettodo/${userEmail}`, {
+            const response = await fetch(`http://localhost:3000/gettodo/${userEmail}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const TodoApp = ({ userEmail }) => {
 
     const addTodo = async () => {
         try {
-            const response = await fetch("${window.location.origin}/addtodo", {
+            const response = await fetch("http://localhost:3000/addtodo", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const TodoApp = ({ userEmail }) => {
 
     const updateTodo = async (id) => {
         try {
-            const response = await fetch(`${window.location.origin}/updatetodo/${id}`, {
+            const response = await fetch(`http://localhost:3000/updatetodo/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -85,7 +85,7 @@ const TodoApp = ({ userEmail }) => {
 
     const deleteTodo = async (id) => {
         try {
-            const response = await fetch(`${window.location.origin}/deletetodo/${id}`, {
+            const response = await fetch(`http://localhost:3000/deletetodo/${id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
