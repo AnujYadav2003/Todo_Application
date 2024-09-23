@@ -13,7 +13,7 @@ const Login = ({ onLoginSuccess }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${window.location.origin}/signin`, {
+      const response = await fetch(`http://localhost:3000/signin`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
